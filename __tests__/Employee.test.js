@@ -7,13 +7,20 @@ test("Creates an Employee object", () => {
 });
 
 test("Employee object has a valid name", () => {
-  expect(employee.getName()).toEqual(expect.any(String));
+  expect(employee.name).toBe("bob");
+  expect(employee.getName()).toEqual(employee.name);
 });
 
 test("Employee object has a valid id", () => {
-  expect(employee.getId()).toEqual(expect.any(Number));
+  expect(employee.id).toBe(1);
+  expect(employee.getId()).toEqual(employee.id);
 });
 
 test("Employee object has a valid email", () => {
-  expect(employee.getEmail()).toMatch(/^\S+@\S+\.\S+$/i);
+  expect(employee.email).toBe("bob@test.com");
+  expect(employee.getEmail()).toEqual(employee.email);
+});
+
+test("Employee object has a valid role", () => {
+  expect(employee.getRole()).toEqual("Employee");
 });
