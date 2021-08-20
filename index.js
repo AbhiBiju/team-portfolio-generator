@@ -3,6 +3,7 @@ const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 const pageGen = require("./src/generateHTML");
 
+
 const inquirer = require("inquirer");
 
 let employeeList = [];
@@ -30,7 +31,7 @@ const managerQs = [
     type: "input",
     name: "officeNum",
     message: "What is the Manager's Office Number?",
-    default: "asdsd90210",
+    default: "90210",
   },
 ];
 

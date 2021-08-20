@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const generateCSS = require("./generateCSS");
 
 const createCards = (employees) => {
   let finalHTML = "";
@@ -11,22 +12,24 @@ const createCards = (employees) => {
         ? `<i class="fas fa-glasses"></i>`
         : `<i class="fas fa-graduation-cap"></i>`;
 
-    console.log(icon);
+    let special = employee.officeNumber
+      ? `Office Number: ${employee.officeNumber}`
+      : employee.github
+      ? `Github: <a href="https://github.com/${employee.github}/">${employee.github}</a>`
+      : `School: ${employee.school}`;
 
-    let special = employee.officeNumber ? `Office Number: ${employee.officeNumber}` : employee.github ? `Github: ${employee.github}` : `School: ${employee.school}`;
-
-    console.log(special);
-
-    finalHTML += `<div class="card">
-      <div class="card-body">
-        <h5 class="card-title">${employee.name}</h5>
-        <h5 class="card-title">${icon}${employee.getRole()}</h5>
+    finalHTML += `<div class="col">
+      <div class="card rounded-lg">
+        <div class="card-body rounded-top bg-dark text-info">
+          <h5 class="card-title">${employee.name}</h5>
+          <h5 class="card-title">${icon} ${employee.getRole()}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: ${employee.id}</li>
+          <li class="list-group-item">Email: <a href="mailto:${employee.email}">${employee.email}</a></li>
+          <li class="list-group-item">${special}</li>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: ${employee.id}</li>
-        <li class="list-group-item">Email: <a>${employee.email}</a></li>
-        <li class="list-group-item">${special}</li>
-      </ul>
     </div>`;
   });
   generateHTML(finalHTML);
@@ -44,20 +47,30 @@ let generateHTML = (content) => {
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous" />
+      <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900,"/>
     <script src="https://kit.fontawesome.com/d831f70b1e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Our Team Page</title>
   </head>
   <body>
-    <header class="jumbotron bg-info p-3"><h1 class="text-center">Our Team Page</h1></header>
+    <header class="jumbotron d-flex flex-row flex-wrap justify-content-center p-0"><div class='d-flex flex-row justify-content-center align-items-center text-center' id="title">
+      <i class="far fa-address-book"></i>
+      <h1 class="text-center p-3 fw-bold">Our Team Page</h1>
+    </div><div id="heroImg"></div></header>
     <main class="container main-wrapper min-vh-100">
-      <div class="row">
-      ${content}
+      <div class="d-flex justify-content-center p-4">
+        <div class="row row-cols-1 row-cols-md-2 g-5 w-85">
+        ${content}
+        </div>
       </div>
     </main>
   </body>
 </html>`;
   writeToFile("index.html", html);
+  writeToFile("style.css", generateCSS.styles());
 };
 
 // Creates files using path and fs

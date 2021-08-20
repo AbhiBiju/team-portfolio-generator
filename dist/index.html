@@ -9,45 +9,72 @@
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous" />
+      <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900,"/>
     <script src="https://kit.fontawesome.com/d831f70b1e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Our Team Page</title>
   </head>
   <body>
-    <header class="jumbotron bg-info p-3"><h1 class="text-center">Our Team Page</h1></header>
+    <header class="jumbotron d-flex flex-row flex-wrap justify-content-center p-0"><div class='d-flex flex-row justify-content-center align-items-center text-center' id="title">
+      <i class="far fa-address-book"></i>
+      <h1 class="text-center p-3 fw-bold">Our Team Page</h1>
+    </div><div id="heroImg"></div></header>
     <main class="container main-wrapper min-vh-100">
-      <div class="row">
-      <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">John Smith</h5>
-        <h5 class="card-title"><i class="fas fa-user-tie"></i>Manager</h5>
+      <div class="d-flex justify-content-center p-4">
+        <div class="row row-cols-1 row-cols-md-2 g-5 w-85">
+        <div class="col">
+      <div class="card rounded-lg">
+        <div class="card-body rounded-top bg-dark text-info">
+          <h5 class="card-title">John Smith</h5>
+          <h5 class="card-title"><i class="fas fa-user-tie"></i> Manager</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: 1</li>
+          <li class="list-group-item">Email: <a href="mailto:johnSmith@gmail.com">johnSmith@gmail.com</a></li>
+          <li class="list-group-item">Office Number: 90210</li>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: 1</li>
-        <li class="list-group-item">Email: <a>johnSmith@gmail.com</a></li>
-        <li class="list-group-item">asdsd90210</li>
-      </ul>
-    </div><div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Jane Doe</h5>
-        <h5 class="card-title"><i class="fas fa-glasses"></i>Engineer</h5>
+    </div><div class="col">
+      <div class="card rounded-lg">
+        <div class="card-body rounded-top bg-dark text-info">
+          <h5 class="card-title">Jane Doe</h5>
+          <h5 class="card-title"><i class="fas fa-glasses"></i> Engineer</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: 2</li>
+          <li class="list-group-item">Email: <a href="mailto:janeDoe@gmail.com">janeDoe@gmail.com</a></li>
+          <li class="list-group-item">Github: <a href="https://github.com/janeDoe/">janeDoe</a></li>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: 2</li>
-        <li class="list-group-item">Email: <a>janeDoe@gmail.com</a></li>
-        <li class="list-group-item">janeDoe</li>
-      </ul>
-    </div><div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Jack Ryan</h5>
-        <h5 class="card-title"><i class="fas fa-graduation-cap"></i>Intern</h5>
+    </div><div class="col">
+      <div class="card rounded-lg">
+        <div class="card-body rounded-top bg-dark text-info">
+          <h5 class="card-title">Jane Doe</h5>
+          <h5 class="card-title"><i class="fas fa-glasses"></i> Engineer</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: 2</li>
+          <li class="list-group-item">Email: <a href="mailto:janeDoe@gmail.com">janeDoe@gmail.com</a></li>
+          <li class="list-group-item">Github: <a href="https://github.com/janeDoe/">janeDoe</a></li>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: 3</li>
-        <li class="list-group-item">Email: <a>jackRyan@gmail.com</a></li>
-        <li class="list-group-item">UM</li>
-      </ul>
+    </div><div class="col">
+      <div class="card rounded-lg">
+        <div class="card-body rounded-top bg-dark text-info">
+          <h5 class="card-title">Jack Ryan</h5>
+          <h5 class="card-title"><i class="fas fa-graduation-cap"></i> Intern</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: 3</li>
+          <li class="list-group-item">Email: <a href="mailto:jackRyan@gmail.com">jackRyan@gmail.com</a></li>
+          <li class="list-group-item">School: UM</li>
+        </ul>
+      </div>
     </div>
+        </div>
       </div>
     </main>
   </body>
