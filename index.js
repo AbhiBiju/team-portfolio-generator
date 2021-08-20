@@ -137,10 +137,10 @@ const getInfo = (questions) => {
           getInfo(engineerQs);
           break;
         case "Intern":
-          getInfo(engineerQs);
+          getInfo(internQs);
           break;
         case "Build":
-          pageGen();
+          pageGen(employeeList);
       }
     });
   });
