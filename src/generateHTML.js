@@ -53,12 +53,12 @@ let generateHTML = (content) => {
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900,"/>
     <script src="https://kit.fontawesome.com/d831f70b1e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css" />
-    <title>Our Team Page</title>
+    <title>Meet Our Team</title>
   </head>
   <body>
     <header class="jumbotron d-flex flex-row flex-wrap justify-content-center p-0"><div class='d-flex flex-row justify-content-center align-items-center text-center' id="title">
       <i class="far fa-address-book"></i>
-      <h1 class="text-center p-3 fw-bold">Our Team Page</h1>
+      <h1 class="text-center p-3 fw-bold">Meet Our Team</h1>
     </div><div id="heroImg"></div></header>
     <main class="container main-wrapper min-vh-100">
       <div class="d-flex justify-content-center p-4">
@@ -68,6 +68,7 @@ let generateHTML = (content) => {
       </div>
     </main>
   </body>
+  <footer class="bg-dark text-center text-white fw-bold p-4">Made with ❤️ by Abhinav Biju</footer>
 </html>`;
   writeToFile("index.html", html);
   writeToFile("style.css", generateCSS.styles());

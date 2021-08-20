@@ -19,6 +19,9 @@ const styles = () => {
 }
 #title>i{
   font-size: 3rem;
+}
+footer{
+  font-size: 1.5rem;
 }`;
   return style;
 };
