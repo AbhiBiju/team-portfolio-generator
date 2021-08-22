@@ -130,9 +130,6 @@ const getInfo = (questions) => {
       ? employeeList.push(new Intern(name, id, email, special))
       : pageGen();
 
-    console.log(employeeList);
-    console.log(answers);
-
     inquirer.prompt(nextEmployee).then((answer) => {
       switch (answer.menu) {
         case "Engineer":
