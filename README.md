@@ -45,6 +45,12 @@ To run this application, use the following command:
 node index.js
 ```
 
+Here is a walkthrough video on how to install and use the app:
+
+`https://user-images.githubusercontent.com/83188832/130339728-34509f0f-bb74-4958-a04f-d21de2b90104.mov`
+
+<https://user-images.githubusercontent.com/83188832/130339728-34509f0f-bb74-4958-a04f-d21de2b90104.mov>
+
 ## Tests
 
 To run tests, use the following command:
