@@ -1,8 +1,8 @@
 const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
-const pageGen = require("./src/generateHTML");
 
+const pageGen = require("./src/generateHTML");
 
 const inquirer = require("inquirer");
 
@@ -132,6 +132,7 @@ const getInfo = (questions) => {
 
     console.log(employeeList);
     console.log(answers);
+
     inquirer.prompt(nextEmployee).then((answer) => {
       switch (answer.menu) {
         case "Engineer":

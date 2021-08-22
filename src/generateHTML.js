@@ -20,7 +20,7 @@ const createCards = (employees) => {
 
     finalHTML += `<div class="col">
       <div class="card rounded-lg">
-        <div class="card-body rounded-top bg-dark text-info">
+        <div class="card-body rounded-top bg-dark text-success">
           <h5 class="card-title">${employee.name}</h5>
           <h5 class="card-title">${icon} ${employee.getRole()}</h5>
         </div>
@@ -78,6 +78,7 @@ let generateHTML = (content) => {
 const writeToFile = (fileName, content) => {
   // Create file path
   fs.writeFileSync(path.join(process.cwd(), "/dist/", fileName), content);
+  //TeamPortofile/dist/index.html
 };
 
 module.exports = createCards;
